@@ -93,4 +93,4 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 }); 
 
 
-client.login('NTI3NDY2NzMzNjc0NjkyNjA4.Dy-X1Q.2SzNGwJGYOBRsQFLscbrDWAOKDk');
+client.login(process.env.BOT_TOKEN);
