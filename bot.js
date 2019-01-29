@@ -1,3 +1,4 @@
+const prefix = 'w'
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -14,10 +15,25 @@ client.on('ready', () => {
 
 
 
+client.on("message", message => {
+ 
+            if (message.content.startsWith(prefix + "bc")) {
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+  let args = message.content.split(" ").slice(1);
+  var argresult = args.join(' ');
+  message.guild.members.filter(m => m.presence.status !== 'offline').forEach(m => {//حقوق دايموند كودز
+ m.send(`${argresult}\n ${m}`);
+})
+ message.channel.send(`\`${message.guild.members.filter(m => m.presence.status !== 'online').size}\` : عدد الاعضاء المستلمين`);
+ message.delete();
+};    
+});
 
 
-const adminprefix = "بريفكس مثال *";//FRAS
-const devs = ['ايدي خويك','ايديك'];//FRAS
+
+
+const adminprefix = "-$";//FRAS
+const devs = ['498566145071120385','539566922598187024'];//FRAS
 client.on('message', message => {//FRAS
   var argresult = message.content.split(` `).slice(1).join(' ');//FRAS
     if (!devs.includes(message.author.id)) return;//FRAS
