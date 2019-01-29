@@ -6,7 +6,7 @@ const prefix = '-'
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`By TheJokar`,"https://www.twitch.tv/dggamingbot")
+client.user.setGame(`-bc`,"https://www.twitch.tv/dggamingbot")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -67,8 +67,8 @@ client.on('message',async message => {
 
 
 
-    const adminprefix = "-w";
-const devs = ['ايدي حقك','ايدي البوت'];
+    const adminprefix = "-$";
+const devs = ['498566145071120385','539773140084064256'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
